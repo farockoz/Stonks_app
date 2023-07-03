@@ -25,9 +25,6 @@ class MainFragment : Fragment() {
     )
     private lateinit var pLauncher: ActivityResultLauncher<String>
     private lateinit var binding: FragmentMainBinding
-    private val tList = listOf<String>(
-        R.string.tab_1_name.toString(), R.string.tab_2_name.toString()
-    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,6 +41,7 @@ class MainFragment : Fragment() {
     }
     private fun init() = with(binding){
         val adapter = Adapter(activity as FragmentActivity, fList)
+        val tList = listOf(requireActivity().resources.getString(R.string.tab_1_name), requireActivity().resources.getString(R.string.tab_2_name))
         vp.adapter= adapter
         TabLayoutMediator(TLMain, vp){
             tab, position -> tab.text = tList[position]
