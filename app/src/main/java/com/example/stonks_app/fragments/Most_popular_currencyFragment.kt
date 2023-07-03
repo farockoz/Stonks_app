@@ -22,6 +22,6 @@ class Most_popular_currencyFragment : Fragment() {
     companion object {
 
         @JvmStatic
-        fun newInstance(param1: String, param2: String) = Most_popular_currencyFragment()
+        fun newInstance() = Most_popular_currencyFragment()
     }
 }

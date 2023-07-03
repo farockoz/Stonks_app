@@ -12,33 +12,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TL_main"
+        android:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="asd2"
-            android:text="asd"/>
+            android:text="@string/tab_1_name"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="asd23"
-            android:text="asd2"/>
+            android:text="@string/tab_2_name"/>
 
 
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/Fon"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="@dimen/radius_main"
+        android:layout_marginTop="@dimen/small_padding"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TL_main">
+        app:layout_constraintTop_toBottomOf="@+id/TL_main">
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -50,9 +55,9 @@
                 android:id="@+id/TV_usdeur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="@dimen/small_padding"
                 android:layout_marginTop="10dp"
-                android:text="USD/EUR"
+                android:text="@string/usd_eur"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,9 +65,9 @@
                 android:id="@+id/TV_usdrub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:text="USD/RUB"
+                android:layout_marginStart="@dimen/small_padding"
+                android:layout_marginTop="@dimen/small_padding"
+                android:text="@string/usd_rub"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/TV_usdeur" />
 
@@ -70,9 +75,9 @@
                 android:id="@+id/TV_eurrub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:text="EUR/RUB"
+                android:layout_marginStart="@dimen/small_padding"
+                android:layout_marginTop="@dimen/small_padding"
+                android:text="@string/eur_rub"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/TV_usdrub" />
 
@@ -80,10 +85,10 @@
                 android:id="@+id/TV_cnyrub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="@dimen/small_padding"
+                android:layout_marginTop="@dimen/small_padding"
                 android:layout_marginBottom="10dp"
-                android:text="CNY/RUB"
+                android:text="@string/cny_rub"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/TV_eurrub" />
@@ -91,24 +96,3 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/TL_choose"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:contentDescription="enter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="asd"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="asd2"/>
-
-    </com.google.android.material.tabs.TabLayout>
-    -->
