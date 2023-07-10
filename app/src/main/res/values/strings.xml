@@ -9,4 +9,5 @@
     <string name="usd_rub">USD/RUB</string>
     <string name="eur_rub">EUR/RUB</string>
     <string name="cny_rub">CNY/RUB</string>
+    <string name="FMPC_TV_Text">Empty</string>
 </resources>

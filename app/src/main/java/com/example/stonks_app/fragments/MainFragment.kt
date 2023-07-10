@@ -54,17 +54,13 @@ class MainFragment : Fragment() {
         pLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()){
             Toast.makeText(activity, "$it", Toast.LENGTH_LONG).show()
         }
-
     }
     private fun checkPermission(){
         if (!isPermissionGranted(Manifest.permission.ACCESS_FINE_LOCATION)){
             permissiomListener()
             pLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
-
         }
-
     }
-
     companion object {
         @JvmStatic
         fun newInstance() = MainFragment()
