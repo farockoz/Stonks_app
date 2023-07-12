@@ -1,14 +1,12 @@
 package com.example.stonks_app.fragments
 
 import android.Manifest
-import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.FragmentActivity
@@ -29,7 +27,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -50,16 +48,19 @@ class MainFragment : Fragment() {
 
     }
 
-    private fun permissiomListener(){
+    private fun permissionListener(){
         pLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()){
             Toast.makeText(activity, "$it", Toast.LENGTH_LONG).show()
         }
     }
     private fun checkPermission(){
         if (!isPermissionGranted(Manifest.permission.ACCESS_FINE_LOCATION)){
-            permissiomListener()
+            permissionListener()
             pLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
         }
+    }
+    private fun requestCurrency(value :String){
+
     }
     companion object {
         @JvmStatic
