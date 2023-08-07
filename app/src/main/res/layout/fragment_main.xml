@@ -33,38 +33,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/TV_usdrub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/small_padding"
-                android:layout_marginTop="@dimen/small_padding"
-                android:text="@string/usd_rub"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TV_usdeur" />
-
-            <TextView
-                android:id="@+id/TV_eurrub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/small_padding"
-                android:layout_marginTop="@dimen/small_padding"
-                android:text="@string/eur_rub"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TV_usdrub" />
-
-            <TextView
-                android:id="@+id/TV_cnyrub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/small_padding"
-                android:layout_marginTop="@dimen/small_padding"
-                android:layout_marginBottom="10dp"
-                android:text="@string/cny_rub"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TV_eurrub" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

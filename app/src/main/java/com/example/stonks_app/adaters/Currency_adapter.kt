@@ -10,6 +10,7 @@ import com.example.stonks_app.CurrencyModel
 import com.example.stonks_app.R
 import com.example.stonks_app.databinding.ListItemBinding
 
+
 class Currency_adapter : ListAdapter<CurrencyModel, Currency_adapter.Holder>(Comparator()) {
     class Holder (view: View) : RecyclerView.ViewHolder(view){
         val binding = ListItemBinding.bind(view)
